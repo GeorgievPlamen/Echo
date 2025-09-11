@@ -1,6 +1,6 @@
 "use client";
 
-import { UserButton } from "@clerk/nextjs";
+import { OrganizationSwitcher, UserButton } from "@clerk/nextjs";
 import { api } from "@workspace/backend/_generated/api";
 import { useMutation, useQuery } from "@workspace/backend/convex";
 import { Button } from "@workspace/ui/components/button";
@@ -13,6 +13,7 @@ export default function Page() {
     <div className="flex items-center justify-center min-h-svh">
       <Button onClick={() => addUser()}>Add</Button>
       <UserButton />
+      <OrganizationSwitcher hidePersonal/>
       <div className="flex flex-col items-center justify-center gap-4">
         <h1 className="text-2xl font-bold">{JSON.stringify(users)}</h1>
       </div>
