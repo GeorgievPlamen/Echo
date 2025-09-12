@@ -14,9 +14,6 @@ export default function Page() {
       <Button onClick={() => addUser()}>Add</Button>
       <UserButton />
       <OrganizationSwitcher hidePersonal/>
-      <div className="flex flex-col items-center justify-center gap-4">
-        <h1 className="text-2xl font-bold">{JSON.stringify(users)}</h1>
-      </div>
     </div>
   );
 }
