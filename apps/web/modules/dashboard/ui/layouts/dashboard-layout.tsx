@@ -1,19 +1,15 @@
-"use client"
+"use client";
 
 import AuthGuard from "@/modules/auth/ui/components/auth-guards";
 import { OrganizationGuard } from "@/modules/auth/ui/components/organization-guard";
 import React, { ReactNode } from "react";
 import { SidebarProvider } from "@workspace/ui/components/sidebar";
-import { cookies } from "next/headers";
+// import { cookies } from "next/headers";
 import { DashboardSidebar } from "./components/dashboard-sidebar";
 
-export const DashboardLayout =  ({
-  children,
-}: {
-  children: ReactNode;
-}) => {
-//   const cookieStore = await cookies();
-//   const defaultOpen = cookieStore.get("sidebar_state")?.value === "true";
+export const DashboardLayout = ({ children }: { children: ReactNode }) => {
+  //   const cookieStore = await cookies();
+  //   const defaultOpen = cookieStore.get("sidebar_state")?.value === "true";
 
   return (
     <AuthGuard>
