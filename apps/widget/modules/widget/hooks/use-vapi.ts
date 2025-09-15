@@ -63,7 +63,7 @@ export const useVapi = () => {
     setIsConnecting(true);
 
     if (vapi) {
-      vapi.start("b1961df4-7faa-4629-8a6e-3c0f9d9b8696");
+      vapi.start("");
     }
   };
 
