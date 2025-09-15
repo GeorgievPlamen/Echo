@@ -1,6 +1,6 @@
 "use client";
 
-import { WidgetView } from "@/modules/widget/ui/views/wiedget-view";
+import { WidgetView } from "@/modules/widget/ui/views/widget-view";
 import { Button } from "@workspace/ui/components/button";
 import { use } from "react";
 
