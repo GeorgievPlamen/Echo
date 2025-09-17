@@ -14,3 +14,4 @@ export const contactSessionIdAtomFamily = atomFamily((organizationId: string) =>
     null
   )
 );
+export const conversationIdAtom = atom<Id<"conversations"> | null>(null);

@@ -119,7 +119,7 @@ export const WidgetLoadingScreen = ({
           <p className="text-lg">Let&apos;s get you started</p>
         </div>
       </WidgetHeader>
-      <div className="flex flex-1 flex-col items--center justify-center gap-y-4 p-4 text-muted-foreground">
+      <div className="flex flex-1 flex-col items-center justify-center gap-y-4 p-4 text-muted-foreground">
         <LoaderIcon className="animate-spin" />
         <p>{loadingMessage ?? "Loading..."}</p>
       </div>
