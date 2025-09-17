@@ -22,6 +22,13 @@ export const getOne = query({
       return null;
     }
 
+    if (conversation.contactSessionId !== session._id) {
+      throw new ConvexError({
+        code: "UNATHORIZED",
+        message: "Incorrect session",
+      });
+    }
+
     return {
       _id: conversation._id,
       status: conversation.status,
