@@ -1,5 +1,6 @@
 import { ConvexError, v } from "convex/values";
 import { mutation, query } from "../_generated/server";
+import { supportAgent } from "../system/ai/agents/supportAgent";
 
 export const getOne = query({
   args: {
@@ -52,7 +53,9 @@ export const create = mutation({
       });
     }
 
-    const threadId = "123"; // TODO
+    const { threadId } = await supportAgent.createThread(ctx, {
+      userId: args.organizationId,
+    });
     const conversationId = await ctx.db.insert("conversations", {
       contactSessionId: session._id,
       status: "unresolved",
