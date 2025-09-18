@@ -21,6 +21,7 @@ import { useAtomValue, useSetAtom } from "jotai";
 import {
   contactSessionIdAtomFamily,
   organizationIdAtom,
+  screenAtom,
 } from "../../atoms/widget-atoms";
 
 const formSchema = z.object({
@@ -28,10 +29,8 @@ const formSchema = z.object({
   email: z.string().email("Invalid email address"),
 });
 
-// Temp
-const organizationId = "123";
-
 const WidgetAuthScreen = () => {
+  const setScreen = useSetAtom(screenAtom);
   const organizationId = useAtomValue(organizationIdAtom);
   const setContactSessionsId = useSetAtom(
     contactSessionIdAtomFamily(organizationId ?? "")
@@ -72,6 +71,7 @@ const WidgetAuthScreen = () => {
     });
 
     setContactSessionsId(contactSessionsId);
+    setScreen("selection");
   };
 
   return (
